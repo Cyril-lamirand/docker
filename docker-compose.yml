@@ -30,6 +30,17 @@ services:
       - MYSQL_ROOT_PASSWORD=root
     networks:
       - iim-lamp
+  phpmyadmin:
+    container_name: iim_phpmyadmin
+    hostname: iim_phpmyadmin
+    build: ./containers/phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+    networks:
+      - iim-lamp
 networks:
   iim-lamp:
 
