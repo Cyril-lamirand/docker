@@ -10,8 +10,8 @@ services:
     networks:
       - iim-lamp
     volumes:
-      - './src/:/usr/local/apache2/htdocs'
-      - './config/:/usr/local/apache2/conf/extra'
+      - './src/:/usr/local/site1/apache2/htdocs'
+      - './config/:/usr/local/site1/apache2/conf/extra'
   php:
     container_name: iim_php
     hostname: iim_php
